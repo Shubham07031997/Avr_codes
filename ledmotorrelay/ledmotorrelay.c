@@ -1,0 +1,30 @@
+#include<avr/io.h>
+#define F_CPU 8000000
+#include<util/delay.h>
+void main()
+{
+   DDRC=0Xff;
+   DDRD=0Xff;
+   PORTC=0b00001110;
+   while(1)
+   {
+      PORTD=0X00;
+	  _delay_ms(100);
+	  PORTD=0X80;
+	  _delay_ms(100);
+	  PORTD=0X40;
+	  _delay_ms(100);
+	  PORTD=0X20;
+	  _delay_ms(100);
+	  PORTD=0X10;
+	  _delay_ms(100);
+	  PORTD=0X08;
+	  _delay_ms(100);
+	  PORTD=0X04;
+	  _delay_ms(100);
+	  PORTD=0X02;
+	  _delay_ms(100);
+	  PORTD=0x01;
+	  _delay_ms(100);
+	  }
+}
